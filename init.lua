@@ -1,5 +1,10 @@
 --	
-	C = loadfile('config.lua')()
+	C = loadfile('config.lua')() -- Config
+
+	S = -- Status
+	{
+		Connected = false,
+		WebServerOn = false
+	}
 
 	dofile('script_wifi_init.lua')
-	dofile('script_webserver_init.lua')
