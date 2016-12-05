@@ -1,5 +1,5 @@
 --	
-	C = loadfile('config.lua')() -- Config
+	C = require('config') -- Config
 
 	S = -- Status
 	{
