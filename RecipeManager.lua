@@ -37,6 +37,8 @@
 							break
 						end
 					end
+
+					file.close()
 				else
 					print('RecipeManager: recipe_' .. RecipeName .. ': No such file')
 				end
