@@ -6,8 +6,8 @@
 
 		GetRecipeList = function()
 		--function GetRecipeList()
-			Files = file.list()
-			Recipes = {}
+			local Files = file.list()
+			local Recipes = {}
 
 			-- Revisamos que los archivos no esten vacios y empiezen por 'recipe_'
 			for Name, Size in pairs(Files) do
@@ -26,7 +26,7 @@
 				if file.open('recipe_' .. RecipeName, 'r') then
 					-- Recorremos el archivo linea por linea y lo parseamos
 					while true do
-						Line = file.readline()
+						local Line = file.readline()
 
 						if Line ~= nil then
 							-- Eliminamos los saltos de linea
@@ -50,7 +50,7 @@
 		end,
 
 		GetLastError = function()
-			E = LastError
+			local E = LastError
 			LastError = nil
 			return E
 		end
