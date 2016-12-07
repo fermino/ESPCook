@@ -1,11 +1,9 @@
 -- 
 	return
 	{
-		LastError = nil,
 		InstructionSet = require('RecipeInstructionSet'),
 
 		GetRecipeList = function()
-		--function GetRecipeList()
 			local Files = file.list()
 			local Recipes = {}
 
@@ -47,11 +45,5 @@
 			end
 
 			return nil
-		end,
-
-		GetLastError = function()
-			local E = LastError
-			LastError = nil
-			return E
 		end
 	}
